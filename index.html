@@ -43,7 +43,7 @@
 
     <link
       rel="apple-touch-icon"
-      href="https://iatlasboi.com/assets/images/hero-bg.jpg"
+      href="https://iatlasboi.com/assets/images/hero-bg.webp"
     />
 
     <!-- Open Graph / Facebook 
@@ -61,7 +61,7 @@
     />
     <meta
       property="og:image"
-      content="https://iatlasboi.com/assets/images/hero-bg.jpg"
+      content="https://iatlasboi.com/assets/images/hero-bg.webp"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -90,7 +90,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://iatlasboi.com/assets/images/hero-bg.jpg"
+      content="https://iatlasboi.com/assets/images/hero-bg.webp"
     />
     <meta
       name="twitter:image:alt"
@@ -108,7 +108,7 @@
         "alternateName": ["Atlas", "iatlasboi", "@iatlasboi"],
         "description": "Professional DJ and electronic music producer from Turkey, known as @iatlasboi on social media",
         "url": "https://iatlasboi.com",
-        "image": "https://iatlasboi.com/assets/images/hero-bg.jpg",
+        "image": "https://iatlasboi.com/assets/images/hero-bg.webp",
         "sameAs": [
           "https://www.instagram.com/iatlasboi/",
           "https://twitter.com/iatlasboi"
@@ -145,12 +145,37 @@
     <!-- Performance & Resource Hints
     ================================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     <link rel="dns-prefetch" href="//www.instagram.com" />
     <link rel="dns-prefetch" href="//twitter.com" />
     <link rel="preload" href="./assets/css/base.css" as="style" />
     <link rel="preload" href="./assets/css/main.css" as="style" />
     <link rel="preload" href="./assets/js/modernizr.js" as="script" />
+
+    <!-- Non-blocking CSS for fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Nunito+Sans:300,400,400i,600,600i,700,700i&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Nunito+Sans:300,400,400i,600,600i,700,700i&display=swap"
+    /></noscript>
+
+    <!-- Non-blocking CSS for Font Awesome -->
+    <link
+      rel="preload"
+      href="./assets/css/font-awesome/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="./assets/css/font-awesome/css/all.min.css"
+    /></noscript>
 
     <!-- CSS
     ================================================== -->
@@ -162,26 +187,70 @@
     ================================================== -->
     <script src="./assets/js/modernizr.js"></script>
 
+    <!-- Font loading optimization -->
+    <script>
+      /* Non-blocking CSS loader fallback */
+      !(function (e) {
+        "use strict";
+        var t = function (t, n, r) {
+          function o(e) {
+            return i.body
+              ? e()
+              : void setTimeout(function () {
+                  o(e);
+                });
+          }
+          function a() {
+            d.addEventListener && d.removeEventListener("load", a),
+              (d.media = r || "all");
+          }
+          var i = e.document,
+            d = i.createElement("link");
+          if (n) d.href = n;
+          else {
+            var l = (i.body || i.getElementsByTagName("head")[0]).childNodes;
+            d.href = l[l.length - 1].href;
+          }
+          var s = i.styleSheets;
+          (d.rel = "stylesheet"),
+            (d.media = "only x"),
+            o(function () {
+              i.body.appendChild(d);
+            }),
+            d.addEventListener && d.addEventListener("load", a);
+          var u = function (e) {
+            for (var t = 0; t < s.length; t++)
+              if (s[t].href === d.href) return e();
+            setTimeout(function () {
+              u(e);
+            });
+          };
+          return d.addEventListener ? u(a) : setTimeout(a, 500), d;
+        };
+        "undefined" != typeof exports ? (exports.loadCSS = t) : (e.loadCSS = t);
+      })("undefined" != typeof global ? global : this);
+    </script>
+
     <!-- Favicons & Icons
     ================================================== -->
     <link
       rel="icon"
-      type="image/png"
+      type="image/webp"
       sizes="32x32"
-      href="./assets/images/logo.png"
+      href="./assets/images/logo-red.webp"
     />
     <link
       rel="icon"
-      type="image/png"
+      type="image/webp"
       sizes="16x16"
-      href="./assets/images/logo.png"
+      href="./assets/images/logo-red.webp"
     />
     <link
       rel="shortcut icon"
-      href="./assets/images/logo.png"
-      type="image/png"
+      href="./assets/images/logo-red.webp"
+      type="image/webp"
     />
-    <link rel="apple-touch-icon" href="./assets/images/logo.png" />
+    <link rel="apple-touch-icon" href="./assets/images/logo-red.webp" />
     <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#ff0000" />
     <meta name="msapplication-TileColor" content="#ff0000" />
@@ -250,13 +319,13 @@
       id="home"
       class="s-home page-hero target-section"
       data-parallax="scroll"
-      data-image-src="./assets/images/hero-bg.jpg"
+      data-image-src="./assets/images/hero-bg.webp"
       data-position-y="-800px"
     >
       <div class="home-content">
         <div class="row home-content__main">
           <img
-            src="./assets/images/logo-red.png"
+            src="./assets/images/logo-red.webp"
             class="logo-img"
             alt="DJ Atlas Official Logo - Professional DJ from Turkey"
           />
@@ -343,8 +412,8 @@
         <div id="photo-gallery" class="photo-gallery">
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo1.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo1.jpg"
+            data-src="./assets/images/photos/slider-photo1.webp"
+            data-pswp-src="./assets/images/photos/slider-photo1.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -358,7 +427,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo1.jpg', 'atlas-photo-1.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo1.webp', 'atlas-photo-1.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -366,8 +435,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo2.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo2.jpg"
+            data-src="./assets/images/photos/slider-photo2.webp"
+            data-pswp-src="./assets/images/photos/slider-photo2.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -381,7 +450,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo2.jpg', 'atlas-photo-2.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo2.webp', 'atlas-photo-2.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -389,8 +458,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo3.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo3.jpg"
+            data-src="./assets/images/photos/slider-photo3.webp"
+            data-pswp-src="./assets/images/photos/slider-photo3.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -404,7 +473,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo3.jpg', 'atlas-photo-3.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo3.webp', 'atlas-photo-3.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -412,8 +481,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo4.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo4.jpg"
+            data-src="./assets/images/photos/slider-photo4.webp"
+            data-pswp-src="./assets/images/photos/slider-photo4.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -427,7 +496,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo4.jpg', 'atlas-photo-4.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo4.webp', 'atlas-photo-4.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -435,8 +504,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo5.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo5.jpg"
+            data-src="./assets/images/photos/slider-photo5.webp"
+            data-pswp-src="./assets/images/photos/slider-photo5.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -450,7 +519,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo5.jpg', 'atlas-photo-5.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo5.webp', 'atlas-photo-5.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -458,8 +527,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo6.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo6.jpg"
+            data-src="./assets/images/photos/slider-photo6.webp"
+            data-pswp-src="./assets/images/photos/slider-photo6.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -473,7 +542,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo6.jpg', 'atlas-photo-6.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo6.webp', 'atlas-photo-6.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -481,8 +550,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo7.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo7.jpg"
+            data-src="./assets/images/photos/slider-photo7.webp"
+            data-pswp-src="./assets/images/photos/slider-photo7.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -496,7 +565,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo7.jpg', 'atlas-photo-7.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo7.webp', 'atlas-photo-7.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -504,8 +573,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo8.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo8.jpg"
+            data-src="./assets/images/photos/slider-photo8.webp"
+            data-pswp-src="./assets/images/photos/slider-photo8.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -519,7 +588,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo8.jpg', 'atlas-photo-8.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo8.webp', 'atlas-photo-8.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -527,8 +596,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo9.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo9.jpg"
+            data-src="./assets/images/photos/slider-photo9.webp"
+            data-pswp-src="./assets/images/photos/slider-photo9.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -542,7 +611,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo9.jpg', 'atlas-photo-9.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo9.webp', 'atlas-photo-9.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -550,8 +619,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo10.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo10.jpg"
+            data-src="./assets/images/photos/slider-photo10.webp"
+            data-pswp-src="./assets/images/photos/slider-photo10.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -565,7 +634,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo10.jpg', 'atlas-photo-10.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo10.webp', 'atlas-photo-10.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -573,8 +642,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo11.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo11.jpg"
+            data-src="./assets/images/photos/slider-photo11.webp"
+            data-pswp-src="./assets/images/photos/slider-photo11.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -588,7 +657,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo11.jpg', 'atlas-photo-11.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo11.webp', 'atlas-photo-11.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -596,8 +665,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo12.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo12.jpg"
+            data-src="./assets/images/photos/slider-photo12.webp"
+            data-pswp-src="./assets/images/photos/slider-photo12.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -611,7 +680,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo12.jpg', 'atlas-photo-12.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo12.webp', 'atlas-photo-12.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -619,8 +688,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo13.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo13.jpg"
+            data-src="./assets/images/photos/slider-photo13.webp"
+            data-pswp-src="./assets/images/photos/slider-photo13.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -634,7 +703,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo13.jpg', 'atlas-photo-13.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo13.webp', 'atlas-photo-13.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -642,8 +711,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo14.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo14.jpg"
+            data-src="./assets/images/photos/slider-photo14.webp"
+            data-pswp-src="./assets/images/photos/slider-photo14.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -657,7 +726,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo14.jpg', 'atlas-photo-14.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo14.webp', 'atlas-photo-14.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -665,8 +734,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo15.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo15.jpg"
+            data-src="./assets/images/photos/slider-photo15.webp"
+            data-pswp-src="./assets/images/photos/slider-photo15.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -680,7 +749,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo15.jpg', 'atlas-photo-15.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo15.webp', 'atlas-photo-15.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -688,8 +757,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo16.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo16.jpg"
+            data-src="./assets/images/photos/slider-photo16.webp"
+            data-pswp-src="./assets/images/photos/slider-photo16.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -703,7 +772,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo16.jpg', 'atlas-photo-16.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo16.webp', 'atlas-photo-16.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -711,8 +780,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo17.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo17.jpg"
+            data-src="./assets/images/photos/slider-photo17.webp"
+            data-pswp-src="./assets/images/photos/slider-photo17.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -726,7 +795,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo17.jpg', 'atlas-photo-17.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo17.webp', 'atlas-photo-17.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -734,8 +803,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo18.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo18.jpg"
+            data-src="./assets/images/photos/slider-photo18.webp"
+            data-pswp-src="./assets/images/photos/slider-photo18.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -749,7 +818,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo18.jpg', 'atlas-photo-18.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo18.webp', 'atlas-photo-18.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -757,8 +826,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo19.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo19.jpg"
+            data-src="./assets/images/photos/slider-photo19.webp"
+            data-pswp-src="./assets/images/photos/slider-photo19.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -772,7 +841,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo19.jpg', 'atlas-photo-19.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo19.webp', 'atlas-photo-19.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -780,8 +849,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo20.jpg"
-            data-pswp-src="./assets/images/photos/slider-photo20.jpg"
+            data-src="./assets/images/photos/slider-photo20.webp"
+            data-pswp-src="./assets/images/photos/slider-photo20.webp"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -795,7 +864,7 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo20.jpg', 'atlas-photo-20.jpg')"
+                onclick="downloadImage('./assets/images/photos/slider-photo20.webp', 'atlas-photo-20.webp')"
               >
                 <i class="fa-solid fa-download"></i>
               </button>

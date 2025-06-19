@@ -1,0 +1,28 @@
+{
+  "name": "DJ Atlas (@iatlasboi) - Professional DJ from Turkey",
+  "short_name": "@iatlasboi",
+  "description": "Professional DJ Atlas (@iatlasboi) from Turkey. Follow @iatlasboi on Instagram for latest mixes and booking info.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#ff0000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["music", "entertainment"],
+  "icons": [
+    {
+      "src": "./assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+} 

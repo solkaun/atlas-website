@@ -11,35 +11,136 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://iatlasboi.com/assets/images/hero-bg.jpg</image:loc>
-            <image:title>DJ Atlas performing live</image:title>
-            <image:caption>Professional DJ Atlas from Turkey performing at a live electronic music event</image:caption>
+            <image:loc>https://iatlasboi.com/assets/images/hero-bg.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) performing live</image:title>
+            <image:caption>Professional DJ Atlas (@iatlasboi) from Turkey performing at a live electronic music event</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo1.jpg</image:loc>
-            <image:title>DJ Atlas Performance Photo 1</image:title>
-            <image:caption>DJ Atlas professional performance photo</image:caption>
+            <image:loc>https://iatlasboi.com/assets/images/logo-red.webp</image:loc>
+            <image:title>DJ Atlas Official Logo</image:title>
+            <image:caption>DJ Atlas (@iatlasboi) official logo - Professional DJ from Turkey</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo2.jpg</image:loc>
-            <image:title>DJ Atlas Performance Photo 2</image:title>
-            <image:caption>DJ Atlas professional performance photo</image:caption>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo1.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 1</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo3.jpg</image:loc>
-            <image:title>DJ Atlas Performance Photo 3</image:title>
-            <image:caption>DJ Atlas professional performance photo</image:caption>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo2.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 2</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo4.jpg</image:loc>
-            <image:title>DJ Atlas Performance Photo 4</image:title>
-            <image:caption>DJ Atlas professional performance photo</image:caption>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo3.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 3</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo5.jpg</image:loc>
-            <image:title>DJ Atlas Performance Photo 5</image:title>
-            <image:caption>DJ Atlas professional performance photo</image:caption>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo4.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 4</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
         </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo5.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 5</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo6.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 6</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo7.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 7</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo8.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 8</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo9.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 9</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo10.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 10</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo11.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 11</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo12.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 12</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo13.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 13</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo14.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 14</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo15.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 15</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo16.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 16</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo17.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 17</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo18.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 18</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo19.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 19</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo20.webp</image:loc>
+            <image:title>DJ Atlas (@iatlasboi) Performance Photo 20</image:title>
+            <image:caption>DJ Atlas professional performance photo - Follow @iatlasboi on Instagram</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://iatlasboi.com/#about</loc>
+        <lastmod>2025-01-15T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://iatlasboi.com/#portfolio</loc>
+        <lastmod>2025-01-15T10:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://iatlasboi.com/#contact</loc>
+        <lastmod>2025-01-15T10:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
     
 </urlset> 

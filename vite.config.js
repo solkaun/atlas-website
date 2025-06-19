@@ -1,82 +1,71 @@
 import { defineConfig } from "vite";
-import { createHtmlPlugin } from "vite-plugin-html";
-import legacy from "@vitejs/plugin-legacy";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   plugins: [
-    createHtmlPlugin({
-      minify: true,
-    }),
-    legacy({
-      targets: ["defaults", "not IE 11"],
+    viteStaticCopy({
+      targets: [
+        {
+          src: "assets/images/",
+          dest: "assets/",
+        },
+        {
+          src: "assets/js/**/*",
+          dest: "assets/js",
+        },
+        {
+          src: "manifest.json",
+          dest: "",
+        },
+        {
+          src: "browserconfig.xml",
+          dest: "",
+        },
+        {
+          src: "robots.txt",
+          dest: "",
+        },
+        {
+          src: "sitemap.xml",
+          dest: "",
+        },
+      ],
     }),
   ],
-
   build: {
     outDir: "dist",
     assetsDir: "assets",
     minify: "terser",
+    sourcemap: false,
+    rollupOptions: {
+      input: {
+        main: "./index.html",
+      },
+      output: {
+        manualChunks: undefined,
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split(".");
+          let extType = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(extType)) {
+            extType = "images";
+          } else if (/woff2?|eot|ttf|otf/i.test(extType)) {
+            extType = "fonts";
+          }
+          return `assets/${extType}/[name]-[hash][extname]`;
+        },
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
+      },
+    },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
       },
     },
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["photoswipe"],
-        },
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split(".");
-          const ext = info[info.length - 1];
-          if (/\.(css)$/.test(assetInfo.name)) {
-            return `assets/css/[name].[hash].${ext}`;
-          }
-          if (/\.(js)$/.test(assetInfo.name)) {
-            return `assets/js/[name].[hash].${ext}`;
-          }
-          if (
-            /\.(png|jpe?g|svg|gif|tiff|bmp|ico|webp)$/i.test(assetInfo.name)
-          ) {
-            return `assets/images/[name].[hash].${ext}`;
-          }
-          return `assets/[name].[hash].${ext}`;
-        },
-        chunkFileNames: "assets/js/[name].[hash].js",
-        entryFileNames: "assets/js/[name].[hash].js",
-      },
-    },
-    cssCodeSplit: true,
-    sourcemap: false,
-    reportCompressedSize: true,
-    chunkSizeWarningLimit: 1000,
   },
-
   server: {
     port: 3000,
     open: true,
-  },
-
-  css: {
-    preprocessorOptions: {
-      css: {
-        charset: false,
-      },
-    },
-  },
-
-  // Asset handling
-  assetsInclude: [
-    "**/*.webp",
-    "**/*.woff2",
-    "**/*.ttf",
-    "**/*.eot",
-    "**/*.svg",
-  ],
-
-  // Performance optimizations
-  optimizeDeps: {
-    include: ["photoswipe"],
   },
 });

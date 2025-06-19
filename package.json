@@ -1,20 +1,15 @@
 {
   "name": "dj-atlas-website",
   "version": "1.0.0",
+  "description": "DJ Atlas (@iatlasboi) - Professional DJ Website",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "serve": "vite preview --port 3000"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "vite": "^5.0.0",
-    "vite-plugin-html": "^3.2.0",
-    "@vitejs/plugin-legacy": "^5.0.0",
-    "terser": "^5.24.0"
-  },
-  "dependencies": {
-    "photoswipe": "^5.4.3"
+    "vite-plugin-static-copy": "^3.0.2"
   }
-} 
+}

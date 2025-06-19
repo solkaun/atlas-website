@@ -451,7 +451,7 @@
       // Define options
       var options = {
         index: index,
-        shareEl: true,
+        shareEl: false,
         fullscreenEl: true,
         zoomEl: true,
         tapToClose: true,

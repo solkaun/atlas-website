@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <url>
+        <loc>https://iatlasboi.com/</loc>
+        <lastmod>2025-01-15T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/hero-bg.jpg</image:loc>
+            <image:title>DJ Atlas performing live</image:title>
+            <image:caption>Professional DJ Atlas from Turkey performing at a live electronic music event</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo1.jpg</image:loc>
+            <image:title>DJ Atlas Performance Photo 1</image:title>
+            <image:caption>DJ Atlas professional performance photo</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo2.jpg</image:loc>
+            <image:title>DJ Atlas Performance Photo 2</image:title>
+            <image:caption>DJ Atlas professional performance photo</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo3.jpg</image:loc>
+            <image:title>DJ Atlas Performance Photo 3</image:title>
+            <image:caption>DJ Atlas professional performance photo</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo4.jpg</image:loc>
+            <image:title>DJ Atlas Performance Photo 4</image:title>
+            <image:caption>DJ Atlas professional performance photo</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://iatlasboi.com/assets/images/photos/slider-photo5.jpg</image:loc>
+            <image:title>DJ Atlas Performance Photo 5</image:title>
+            <image:caption>DJ Atlas professional performance photo</image:caption>
+        </image:image>
+    </url>
+    
+</urlset> 

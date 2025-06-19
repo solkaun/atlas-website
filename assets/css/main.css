@@ -2670,7 +2670,6 @@ html.no-csstransitions .home-content__main {
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  height: 300px;
 }
 
 .photo-item:hover {

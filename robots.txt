@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://iatlasboi.com/sitemap.xml
+
+# Allow all image files
+Allow: /assets/images/
+
+# Allow CSS and JS
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Disallow unnecessary files
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.log
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Host declaration
+Host: https://iatlasboi.com 

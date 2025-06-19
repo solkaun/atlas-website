@@ -3435,7 +3435,11 @@ html.no-csstransitions .home-content__main {
 
 .contact-social li a:hover,
 .contact-social li a:focus {
-  color: #ffffff;
+  color: #eb0000;
+}
+
+.follow-link:hover {
+  color: #eb0000;
 }
 
 .contact-social li:last-child {

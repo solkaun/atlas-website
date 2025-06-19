@@ -153,6 +153,39 @@
     <link rel="preload" href="./assets/css/main.css" as="style" />
     <link rel="preload" href="./assets/js/modernizr.js" as="script" />
 
+    <!-- LCP Image Preload - Critical for performance -->
+    <link
+      rel="preload"
+      href="./assets/images/logo-red.webp"
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="./assets/images/hero-bg.webp"
+      as="image"
+      fetchpriority="high"
+    />
+
+    <!-- Critical CSS for LCP - Above the fold -->
+    <style>
+      .logo-img {
+        width: 500px;
+        height: auto;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+      .home-content {
+        position: relative;
+        z-index: 4;
+      }
+      .home-content__main {
+        position: relative;
+        text-align: center;
+      }
+    </style>
+
     <!-- Non-blocking CSS for fonts -->
     <link
       rel="preload"
@@ -328,6 +361,11 @@
             src="./assets/images/logo-red.webp"
             class="logo-img"
             alt="DJ Atlas Official Logo - Professional DJ from Turkey"
+            fetchpriority="high"
+            decoding="sync"
+            loading="eager"
+            width="500"
+            height="500"
           />
 
           <h3>

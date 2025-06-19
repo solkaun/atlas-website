@@ -2049,6 +2049,13 @@ body.menu-is-open {
 .home-content .logo-img {
   width: 500px;
   height: auto;
+  /* LCP Optimization */
+  contain: layout style paint;
+  will-change: transform;
+  transform: translateZ(0);
+  /* Prevent layout shift */
+  aspect-ratio: 500 / 280;
+  object-fit: contain;
 }
 
 .home-content h1 {

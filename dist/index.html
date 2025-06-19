@@ -149,9 +149,8 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     <link rel="dns-prefetch" href="//www.instagram.com" />
     <link rel="dns-prefetch" href="//twitter.com" />
-    <link rel="preload" href="/assets/js/modernizr-iXvKjyyg.js" as="script" />
 
-    <!-- LCP Image Preload - Critical for performance -->
+    <!-- Critical Resource Preloading -->
     <link
       rel="preload"
       href="/assets/images/logo-red-CgfV_q5L.webp"
@@ -164,25 +163,7 @@
       as="image"
       fetchpriority="high"
     />
-
-    <!-- Critical CSS for LCP - Above the fold -->
-    <style>
-      .logo-img {
-        width: 500px;
-        height: auto;
-        max-width: 100%;
-        display: block;
-        margin: 0 auto;
-      }
-      .home-content {
-        position: relative;
-        z-index: 4;
-      }
-      .home-content__main {
-        position: relative;
-        text-align: center;
-      }
-    </style>
+    <link rel="preload" href="/assets/js/modernizr-iXvKjyyg.js" as="script" />
 
     <!-- Non-blocking CSS for fonts -->
     <link
@@ -207,6 +188,36 @@
     <!-- Scripts
     ================================================== -->
     <script src="./assets/js/modernizr.js"></script>
+
+    <!-- Critical CSS for LCP -->
+    <style>
+      .logo-img {
+        width: 500px;
+        height: auto;
+        contain: layout style paint;
+        will-change: transform;
+        transform: translateZ(0);
+        aspect-ratio: 500 / 280;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+      .home-content__main {
+        position: relative;
+        text-align: center;
+      }
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #121212;
+        z-index: 500;
+        height: 100vh;
+        width: 100%;
+      }
+    </style>
 
     <!-- Font loading optimization -->
     <script>
@@ -276,7 +287,7 @@
     <meta name="theme-color" content="#ff0000" />
     <meta name="msapplication-TileColor" content="#ff0000" />
     <meta name="msapplication-config" content="./browserconfig.xml" />
-    <link rel="stylesheet" crossorigin href="/assets/css/main-CmwUkLu5.css">
+    <link rel="stylesheet" crossorigin href="/assets/css/main-B49PdMWE.css">
   </head>
 
   <body id="top">
@@ -350,11 +361,11 @@
             src="/assets/images/logo-red-CgfV_q5L.webp"
             class="logo-img"
             alt="DJ Atlas Official Logo - Professional DJ from Turkey"
+            width="500"
+            height="280"
             fetchpriority="high"
             decoding="sync"
             loading="eager"
-            width="500"
-            height="500"
           />
 
           <h3>

@@ -74,7 +74,11 @@
 
     // close menu clicking outside the menu itself
     siteBody.on("click", function (e) {
-      if (!$(e.target).is(".header-nav, .header-nav__content, .header-menu-toggle, .header-menu-toggle span")) {
+      if (
+        !$(e.target).is(
+          ".header-nav, .header-nav__content, .header-menu-toggle, .header-menu-toggle span"
+        )
+      ) {
         siteBody.removeClass("menu-is-open");
       }
     });
@@ -138,7 +142,12 @@
         };
 
         // initialize PhotoSwipe
-        var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+        var lightBox = new PhotoSwipe(
+          $pswp,
+          PhotoSwipeUI_Default,
+          items,
+          options
+        );
         lightBox.init();
       });
     });
@@ -196,6 +205,334 @@
     });
   };
 
+  /* Lazy Loading
+   * ------------------------------------------------------ */
+  var ssLazyLoading = function () {
+    // Check if Intersection Observer is supported
+    if (!("IntersectionObserver" in window)) {
+      // Fallback for older browsers - load all images immediately
+      loadAllImages();
+      return;
+    }
+
+    // Create intersection observer
+    const imageObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const container = entry.target;
+            const img = container.querySelector(".lazy-image");
+            const src = container.getAttribute("data-src");
+
+            if (src && img) {
+              loadImage(img, src, container);
+              observer.unobserve(container);
+            }
+          }
+        });
+      },
+      {
+        // Load images when they're 100px away from being visible
+        rootMargin: "100px 0px",
+        threshold: 0.01,
+      }
+    );
+
+    // Observe all lazy-load containers
+    const lazyContainers = document.querySelectorAll(".lazy-load");
+    lazyContainers.forEach((container) => {
+      imageObserver.observe(container);
+    });
+
+    // Load first 4 images immediately for better UX
+    const firstImages = Array.from(lazyContainers).slice(0, 4);
+    firstImages.forEach((container) => {
+      const img = container.querySelector(".lazy-image");
+      const src = container.getAttribute("data-src");
+      if (src && img) {
+        loadImage(img, src, container);
+        imageObserver.unobserve(container);
+      }
+    });
+  };
+
+  // Function to load a single image
+  function loadImage(img, src, container) {
+    const tempImg = new Image();
+
+    tempImg.onload = function () {
+      img.src = src;
+      container.classList.add("loaded");
+
+      // Preload next images for smoother experience
+      preloadNextImages(container);
+    };
+
+    tempImg.onerror = function () {
+      // If image fails to load, still mark as loaded to hide skeleton
+      container.classList.add("loaded");
+      img.style.display = "none";
+    };
+
+    tempImg.src = src;
+  }
+
+  // Preload next few images for smoother scrolling
+  function preloadNextImages(currentContainer) {
+    const allContainers = Array.from(document.querySelectorAll(".lazy-load"));
+    const currentIndex = allContainers.indexOf(currentContainer);
+    const nextContainers = allContainers.slice(
+      currentIndex + 1,
+      currentIndex + 3
+    );
+
+    nextContainers.forEach((container) => {
+      if (!container.classList.contains("loaded")) {
+        const img = container.querySelector(".lazy-image");
+        const src = container.getAttribute("data-src");
+        if (src && img) {
+          const tempImg = new Image();
+          tempImg.onload = function () {
+            img.src = src;
+            container.classList.add("loaded");
+          };
+          tempImg.src = src;
+        }
+      }
+    });
+  }
+
+  // Fallback function for older browsers
+  function loadAllImages() {
+    const lazyContainers = document.querySelectorAll(".lazy-load");
+    lazyContainers.forEach((container) => {
+      const img = container.querySelector(".lazy-image");
+      const src = container.getAttribute("data-src");
+      if (src && img) {
+        loadImage(img, src, container);
+      }
+    });
+  }
+
+  /* PhotoSwipe Gallery
+   * ------------------------------------------------------ */
+  var ssPhotoGallery = function () {
+    // Photo Gallery data
+    var galleryItems = [
+      {
+        src: "./assets/images/photos/slider-photo1.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 1",
+      },
+      {
+        src: "./assets/images/photos/slider-photo2.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 2",
+      },
+      {
+        src: "./assets/images/photos/slider-photo3.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 3",
+      },
+      {
+        src: "./assets/images/photos/slider-photo4.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 4",
+      },
+      {
+        src: "./assets/images/photos/slider-photo5.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 5",
+      },
+      {
+        src: "./assets/images/photos/slider-photo6.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 6",
+      },
+      {
+        src: "./assets/images/photos/slider-photo7.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 7",
+      },
+      {
+        src: "./assets/images/photos/slider-photo8.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 8",
+      },
+      {
+        src: "./assets/images/photos/slider-photo9.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 9",
+      },
+      {
+        src: "./assets/images/photos/slider-photo10.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 10",
+      },
+      {
+        src: "./assets/images/photos/slider-photo11.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 11",
+      },
+      {
+        src: "./assets/images/photos/slider-photo12.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 12",
+      },
+      {
+        src: "./assets/images/photos/slider-photo13.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 13",
+      },
+      {
+        src: "./assets/images/photos/slider-photo14.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 14",
+      },
+      {
+        src: "./assets/images/photos/slider-photo15.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 15",
+      },
+      {
+        src: "./assets/images/photos/slider-photo16.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 16",
+      },
+      {
+        src: "./assets/images/photos/slider-photo17.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 17",
+      },
+      {
+        src: "./assets/images/photos/slider-photo18.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 18",
+      },
+      {
+        src: "./assets/images/photos/slider-photo19.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 19",
+      },
+      {
+        src: "./assets/images/photos/slider-photo20.jpg",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 20",
+      },
+    ];
+
+    // Global function to open PhotoSwipe
+    window.openPhotoSwipe = function (index) {
+      var pswpElement = document.querySelectorAll(".pswp")[0];
+
+      // Update gallery items with currently loaded images
+      updateGalleryItems();
+
+      // Define options
+      var options = {
+        index: index,
+        shareEl: true,
+        fullscreenEl: true,
+        zoomEl: true,
+        tapToClose: true,
+        tapToToggleControls: true,
+        closeOnScroll: false,
+        history: false,
+        focus: false,
+        showAnimationDuration: 333,
+        hideAnimationDuration: 333,
+      };
+
+      // Initialize PhotoSwipe
+      var gallery = new PhotoSwipe(
+        pswpElement,
+        PhotoSwipeUI_Default,
+        galleryItems,
+        options
+      );
+
+      // Add download button
+      gallery.listen("uiUpdate", function () {
+        var downloadBtn = gallery.ui.bar.querySelector(
+          ".pswp__button--download"
+        );
+        if (!downloadBtn) {
+          downloadBtn = document.createElement("button");
+          downloadBtn.className = "pswp__button pswp__button--download";
+          downloadBtn.title = "Download image";
+          downloadBtn.onclick = function () {
+            var currentItem = gallery.currItem;
+            downloadImage(
+              currentItem.src,
+              "atlas-photo-" + (gallery.getCurrentIndex() + 1) + ".jpg"
+            );
+          };
+          gallery.ui.bar.appendChild(downloadBtn);
+        }
+      });
+
+      gallery.init();
+    };
+
+    // Update gallery items with loaded images
+    function updateGalleryItems() {
+      const photoItems = document.querySelectorAll(".photo-item");
+      photoItems.forEach((item, index) => {
+        const img = item.querySelector(".lazy-image");
+        if (img && img.src && img.src !== "") {
+          galleryItems[index].src = img.src;
+        }
+      });
+    }
+
+    // Global function to download image
+    window.downloadImage = function (imageUrl, fileName) {
+      fetch(imageUrl)
+        .then((response) => response.blob())
+        .then((blob) => {
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.style.display = "none";
+          a.href = url;
+          a.download = fileName;
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
+          document.body.removeChild(a);
+        })
+        .catch((error) => {
+          // Fallback method
+          const a = document.createElement("a");
+          a.href = imageUrl;
+          a.download = fileName;
+          a.target = "_blank";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        });
+    };
+  };
+
   /* Initialize
    * ------------------------------------------------------ */
   (function clInit() {
@@ -204,25 +541,10 @@
     ssOffCanvas();
     ssMasonryFolio();
     ssPhotoswipe();
+    ssLazyLoading();
+    ssPhotoGallery();
     ssSmoothScroll();
     ssAlertBoxes();
     ssAOS();
-    new Splide("#image-slider").mount();
-
-    const downloadButtons = document.querySelectorAll(".download-btn");
-
-    function downloadImage(event) {
-      const slide = event.target.closest(".splide__slide");
-      const image = slide.querySelector("img");
-      const imageSrc = image.getAttribute("src");
-      const link = document.createElement("a");
-      link.href = imageSrc;
-      link.download = "image.jpg";
-      link.click();
-    }
-
-    downloadButtons.forEach(function (button) {
-      button.addEventListener("click", downloadImage);
-    });
   })();
 })(jQuery);

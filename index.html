@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="en" itemscope itemtype="https://schema.org/Person">
   <head>
     <!--- basic page needs
@@ -28,7 +28,7 @@
     <meta name="language" content="English" />
     <meta name="author" content="DJ Atlas (@iatlasboi)" />
     <meta name="publisher" content="DJ Atlas Official (@iatlasboi)" />
-    <meta name="copyright" content="© 2025 DJ Atlas. All rights reserved." />
+    <meta name="copyright" content="© 2026 DJ Atlas. All rights reserved." />
     <meta name="revisit-after" content="7 days" />
     <meta name="rating" content="general" />
     <meta name="distribution" content="global" />
@@ -138,7 +138,7 @@
           "name": "DJ",
           "description": "Professional disc jockey specializing in electronic music, active as @iatlasboi on Instagram"
         },
-        "copyrightYear": "2025"
+        "copyrightYear": "2026"
       }
     </script>
 
@@ -172,7 +172,10 @@
       rel="preload"
       href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Nunito+Sans:300,400,400i,600,600i,700,700i&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript
       ><link
@@ -185,7 +188,10 @@
       rel="preload"
       href="./assets/css/font-awesome/css/all.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript
       ><link rel="stylesheet" href="./assets/css/font-awesome/css/all.min.css"
@@ -245,8 +251,8 @@
                 });
           }
           function a() {
-            d.addEventListener && d.removeEventListener("load", a),
-              (d.media = r || "all");
+            (d.addEventListener && d.removeEventListener("load", a),
+              (d.media = r || "all"));
           }
           var i = e.document,
             d = i.createElement("link");
@@ -256,12 +262,12 @@
             d.href = l[l.length - 1].href;
           }
           var s = i.styleSheets;
-          (d.rel = "stylesheet"),
+          ((d.rel = "stylesheet"),
             (d.media = "only x"),
             o(function () {
               i.body.appendChild(d);
             }),
-            d.addEventListener && d.addEventListener("load", a);
+            d.addEventListener && d.addEventListener("load", a));
           var u = function (e) {
             for (var t = 0; t < s.length; t++)
               if (s[t].href === d.href) return e();
@@ -269,7 +275,7 @@
               u(e);
             });
           };
-          return d.addEventListener ? u(a) : setTimeout(a, 500), d;
+          return (d.addEventListener ? u(a) : setTimeout(a, 500), d);
         };
         "undefined" != typeof exports ? (exports.loadCSS = t) : (e.loadCSS = t);
       })("undefined" != typeof global ? global : this);
@@ -461,8 +467,8 @@
         <div id="photo-gallery" class="photo-gallery">
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo1.webp"
-            data-pswp-src="./assets/images/photos/slider-photo1.webp"
+            data-src="./assets/images/photos/slider-photo1.jpg"
+            data-pswp-src="./assets/images/photos/slider-photo1.jpg"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -476,7 +482,12 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo1.webp', 'atlas-photo-1.webp')"
+                onclick="
+                  downloadImage(
+                    './assets/images/photos/slider-photo1.jpg',
+                    'atlas-photo-1.jpg',
+                  )
+                "
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -484,8 +495,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo2.webp"
-            data-pswp-src="./assets/images/photos/slider-photo2.webp"
+            data-src="./assets/images/photos/slider-photo2.jpg"
+            data-pswp-src="./assets/images/photos/slider-photo2.jpg"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -499,7 +510,12 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo2.webp', 'atlas-photo-2.webp')"
+                onclick="
+                  downloadImage(
+                    './assets/images/photos/slider-photo2.jpg',
+                    'atlas-photo-2.jpg',
+                  )
+                "
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -507,8 +523,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo3.webp"
-            data-pswp-src="./assets/images/photos/slider-photo3.webp"
+            data-src="./assets/images/photos/slider-photo3.jpg"
+            data-pswp-src="./assets/images/photos/slider-photo3.jpg"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -522,7 +538,12 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo3.webp', 'atlas-photo-3.webp')"
+                onclick="
+                  downloadImage(
+                    './assets/images/photos/slider-photo3.jpg',
+                    'atlas-photo-3.jpg',
+                  )
+                "
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -530,8 +551,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo4.webp"
-            data-pswp-src="./assets/images/photos/slider-photo4.webp"
+            data-src="./assets/images/photos/slider-photo4.jpg"
+            data-pswp-src="./assets/images/photos/slider-photo4.jpg"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -545,7 +566,12 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo4.webp', 'atlas-photo-4.webp')"
+                onclick="
+                  downloadImage(
+                    './assets/images/photos/slider-photo4.jpg',
+                    'atlas-photo-4.jpg',
+                  )
+                "
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -553,8 +579,8 @@
           </div>
           <div
             class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo5.webp"
-            data-pswp-src="./assets/images/photos/slider-photo5.webp"
+            data-src="./assets/images/photos/slider-photo5.jpg"
+            data-pswp-src="./assets/images/photos/slider-photo5.jpg"
             data-pswp-width="1200"
             data-pswp-height="800"
           >
@@ -568,352 +594,12 @@
               </button>
               <button
                 class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo5.webp', 'atlas-photo-5.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo6.webp"
-            data-pswp-src="./assets/images/photos/slider-photo6.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 6" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(5)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo6.webp', 'atlas-photo-6.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo7.webp"
-            data-pswp-src="./assets/images/photos/slider-photo7.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 7" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(6)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo7.webp', 'atlas-photo-7.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo8.webp"
-            data-pswp-src="./assets/images/photos/slider-photo8.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 8" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(7)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo8.webp', 'atlas-photo-8.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo9.webp"
-            data-pswp-src="./assets/images/photos/slider-photo9.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 9" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(8)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo9.webp', 'atlas-photo-9.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo10.webp"
-            data-pswp-src="./assets/images/photos/slider-photo10.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 10" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(9)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo10.webp', 'atlas-photo-10.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo11.webp"
-            data-pswp-src="./assets/images/photos/slider-photo11.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 11" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(10)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo11.webp', 'atlas-photo-11.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo12.webp"
-            data-pswp-src="./assets/images/photos/slider-photo12.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 12" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(11)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo12.webp', 'atlas-photo-12.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo13.webp"
-            data-pswp-src="./assets/images/photos/slider-photo13.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 13" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(12)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo13.webp', 'atlas-photo-13.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo14.webp"
-            data-pswp-src="./assets/images/photos/slider-photo14.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 14" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(13)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo14.webp', 'atlas-photo-14.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo15.webp"
-            data-pswp-src="./assets/images/photos/slider-photo15.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 15" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(14)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo15.webp', 'atlas-photo-15.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo16.webp"
-            data-pswp-src="./assets/images/photos/slider-photo16.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 16" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(15)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo16.webp', 'atlas-photo-16.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo17.webp"
-            data-pswp-src="./assets/images/photos/slider-photo17.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 17" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(16)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo17.webp', 'atlas-photo-17.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo18.webp"
-            data-pswp-src="./assets/images/photos/slider-photo18.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 18" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(17)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo18.webp', 'atlas-photo-18.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo19.webp"
-            data-pswp-src="./assets/images/photos/slider-photo19.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 19" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(18)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo19.webp', 'atlas-photo-19.webp')"
-              >
-                <i class="fa-solid fa-download"></i>
-              </button>
-            </div>
-          </div>
-          <div
-            class="photo-item lazy-load"
-            data-src="./assets/images/photos/slider-photo20.webp"
-            data-pswp-src="./assets/images/photos/slider-photo20.webp"
-            data-pswp-width="1200"
-            data-pswp-height="800"
-          >
-            <div class="photo-skeleton">
-              <div class="skeleton-shimmer"></div>
-            </div>
-            <img class="lazy-image" alt="Atlas Photo 20" loading="lazy" />
-            <div class="photo-overlay">
-              <button class="view-btn" onclick="openPhotoSwipe(19)">
-                <i class="fa-solid fa-expand"></i>
-              </button>
-              <button
-                class="download-btn"
-                onclick="downloadImage('./assets/images/photos/slider-photo20.webp', 'atlas-photo-20.webp')"
+                onclick="
+                  downloadImage(
+                    './assets/images/photos/slider-photo5.jpg',
+                    'atlas-photo-5.jpg',
+                  )
+                "
               >
                 <i class="fa-solid fa-download"></i>
               </button>
@@ -1021,13 +707,11 @@
     <footer>
       <div class="row">
         <div class="col-full ss-copyright">
-          <span>© Copyright Atlas 2025</span>
+          <span>© Copyright Atlas 2026</span>
           <span
             >Developed by
-            <a
-              href="https://www.instagram.com/kuram.development/"
-              target="_blank"
-              >Kuram Development</a
+            <a href="https://www.instagram.com/yakup.ai/" target="_blank"
+              >Kuram Group LTD</a
             ></span
           >
         </div>

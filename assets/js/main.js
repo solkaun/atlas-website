@@ -76,7 +76,7 @@
     siteBody.on("click", function (e) {
       if (
         !$(e.target).is(
-          ".header-nav, .header-nav__content, .header-menu-toggle, .header-menu-toggle span"
+          ".header-nav, .header-nav__content, .header-menu-toggle, .header-menu-toggle span",
         )
       ) {
         siteBody.removeClass("menu-is-open");
@@ -146,7 +146,7 @@
           $pswp,
           PhotoSwipeUI_Default,
           items,
-          options
+          options,
         );
         lightBox.init();
       });
@@ -170,7 +170,7 @@
             scrollTop: $target.offset().top,
           },
           cfg.scrollDuration,
-          "swing"
+          "swing",
         )
         .promise()
         .done(function () {
@@ -235,7 +235,7 @@
         // Load images when they're 100px away from being visible
         rootMargin: "100px 0px",
         threshold: 0.01,
-      }
+      },
     );
 
     // Observe all lazy-load containers
@@ -283,7 +283,7 @@
     const currentIndex = allContainers.indexOf(currentContainer);
     const nextContainers = allContainers.slice(
       currentIndex + 1,
-      currentIndex + 3
+      currentIndex + 3,
     );
 
     nextContainers.forEach((container) => {
@@ -349,96 +349,6 @@
         h: 800,
         title: "Atlas Photo 5",
       },
-      {
-        src: "./assets/images/photos/slider-photo6.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 6",
-      },
-      {
-        src: "./assets/images/photos/slider-photo7.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 7",
-      },
-      {
-        src: "./assets/images/photos/slider-photo8.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 8",
-      },
-      {
-        src: "./assets/images/photos/slider-photo9.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 9",
-      },
-      {
-        src: "./assets/images/photos/slider-photo10.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 10",
-      },
-      {
-        src: "./assets/images/photos/slider-photo11.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 11",
-      },
-      {
-        src: "./assets/images/photos/slider-photo12.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 12",
-      },
-      {
-        src: "./assets/images/photos/slider-photo13.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 13",
-      },
-      {
-        src: "./assets/images/photos/slider-photo14.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 14",
-      },
-      {
-        src: "./assets/images/photos/slider-photo15.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 15",
-      },
-      {
-        src: "./assets/images/photos/slider-photo16.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 16",
-      },
-      {
-        src: "./assets/images/photos/slider-photo17.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 17",
-      },
-      {
-        src: "./assets/images/photos/slider-photo18.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 18",
-      },
-      {
-        src: "./assets/images/photos/slider-photo19.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 19",
-      },
-      {
-        src: "./assets/images/photos/slider-photo20.jpg",
-        w: 1200,
-        h: 800,
-        title: "Atlas Photo 20",
-      },
     ];
 
     // Global function to open PhotoSwipe
@@ -468,13 +378,13 @@
         pswpElement,
         PhotoSwipeUI_Default,
         galleryItems,
-        options
+        options,
       );
 
       // Add download button
       gallery.listen("uiUpdate", function () {
         var downloadBtn = gallery.ui.bar.querySelector(
-          ".pswp__button--download"
+          ".pswp__button--download",
         );
         if (!downloadBtn) {
           downloadBtn = document.createElement("button");
@@ -484,7 +394,7 @@
             var currentItem = gallery.currItem;
             downloadImage(
               currentItem.src,
-              "atlas-photo-" + (gallery.getCurrentIndex() + 1) + ".jpg"
+              "atlas-photo-" + (gallery.getCurrentIndex() + 1) + ".jpg",
             );
           };
           gallery.ui.bar.appendChild(downloadBtn);

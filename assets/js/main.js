@@ -320,31 +320,31 @@
     // Photo Gallery data
     var galleryItems = [
       {
-        src: "./assets/images/photos/slider-photo1.jpg",
+        src: "./assets/images/photos/slider-photo1.webp",
         w: 1200,
         h: 800,
         title: "Atlas Photo 1",
       },
       {
-        src: "./assets/images/photos/slider-photo2.jpg",
+        src: "./assets/images/photos/slider-photo2.webp",
         w: 1200,
         h: 800,
         title: "Atlas Photo 2",
       },
       {
-        src: "./assets/images/photos/slider-photo3.jpg",
+        src: "./assets/images/photos/slider-photo3.webp",
         w: 1200,
         h: 800,
         title: "Atlas Photo 3",
       },
       {
-        src: "./assets/images/photos/slider-photo4.jpg",
+        src: "./assets/images/photos/slider-photo4.webp",
         w: 1200,
         h: 800,
         title: "Atlas Photo 4",
       },
       {
-        src: "./assets/images/photos/slider-photo5.jpg",
+        src: "./assets/images/photos/slider-photo5.webp",
         w: 1200,
         h: 800,
         title: "Atlas Photo 5",
@@ -394,7 +394,7 @@
             var currentItem = gallery.currItem;
             downloadImage(
               currentItem.src,
-              "atlas-photo-" + (gallery.getCurrentIndex() + 1) + ".jpg",
+              "atlas-photo-" + (gallery.getCurrentIndex() + 1) + ".webp",
             );
           };
           gallery.ui.bar.appendChild(downloadBtn);

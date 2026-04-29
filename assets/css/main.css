@@ -2825,7 +2825,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .photo-item img {
-    height: 280px;
+    height: 100%;
   }
 }
 
@@ -2837,7 +2837,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .photo-item img {
-    height: 250px;
+    height: 100%;
   }
 
   .view-btn,
@@ -2856,8 +2856,12 @@ html.no-csstransitions .home-content__main {
     padding: 0 10px;
   }
 
+  .photo-item {
+    height: 220px !important;
+  }
+
   .photo-item img {
-    height: 200px;
+    height: 100%;
   }
 
   .view-btn,
@@ -2875,7 +2879,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .photo-item img {
-    height: 180px;
+    height: 100%;
   }
 }
 

@@ -1665,6 +1665,15 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   overflow: hidden;
 }
 
+.pswp__zoom-wrap {
+  transform: none !important;
+}
+
+.pswp__zoom-wrap .pswp__img {
+  height: 100% !important;
+  width: 100% !important;
+}
+
 .pswp__img {
   position: absolute;
   width: auto;

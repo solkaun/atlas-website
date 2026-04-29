@@ -2059,6 +2059,14 @@ body.menu-is-open {
   filter: brightness(0) invert(0);
 }
 
+@media screen and (max-width: 768px) {
+  .home-content .logo-img {
+    width: 300px;
+    height: auto;
+    aspect-ratio: 300 / 200;
+  }
+}
+
 .home-content h1.home-intro {
   margin-top: 2rem;
   font-family: "Nunito Sans", sans-serif;
@@ -2066,7 +2074,7 @@ body.menu-is-open {
   font-size: 2rem;
   line-height: 1.342;
   font-style: normal;
-  color: #9c9c9c;
+  color: #fff;
   letter-spacing: normal;
 }
 

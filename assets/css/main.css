@@ -2131,7 +2131,7 @@ body.menu-is-open {
   font-weight: 600;
   font-size: 1.3rem;
   line-height: 1;
-  color: #9c9c9c;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   -webkit-transition: color 0.3s ease-in-out;
@@ -2140,7 +2140,7 @@ body.menu-is-open {
 }
 
 .home-content__video .video-link:hover .video-text {
-  color: white;
+  color: #ff2929;
 }
 
 .home-content__video .video-link:hover .video-icon {

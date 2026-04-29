@@ -153,16 +153,11 @@
     <!-- Critical Resource Preloading -->
     <link
       rel="preload"
-      href="/assets/images/logo-red-CgfV_q5L.webp"
+      href="/assets/images/logo-red-400-S784w1TF.webp"
       as="image"
       fetchpriority="high"
     />
-    <link
-      rel="preload"
-      href="/assets/images/hero-bg2-C7kQi_g_.webp"
-      as="image"
-      fetchpriority="high"
-    />
+
     <link rel="preload" href="/assets/js/modernizr-iXvKjyyg.js" as="script" />
 
     <!-- Non-blocking CSS for fonts -->
@@ -290,7 +285,7 @@
     <meta name="theme-color" content="#ff0000" />
     <meta name="msapplication-TileColor" content="#ff0000" />
     <meta name="msapplication-config" content="./browserconfig.xml" />
-    <link rel="stylesheet" crossorigin href="/assets/css/main-DLdXiiyO.css">
+    <link rel="stylesheet" crossorigin href="/assets/css/main-Do8N_X9L.css">
   </head>
 
   <body id="top">
@@ -367,13 +362,15 @@
         id="home"
         class="s-home page-hero target-section"
         data-parallax="scroll"
-        data-image-src="./assets/images/hero-bg2.webp"
+        data-image-src="./assets/images/hero-bg4.webp"
         data-position-y="0px"
       >
         <div class="home-content">
           <div class="row home-content__main">
             <img
-              src="/assets/images/logo-red-CgfV_q5L.webp"
+              src="/assets/images/logo-red-400-S784w1TF.webp"
+              srcset="/assets/images/logo-red-400-S784w1TF.webp 400w, /assets/images/logo-red-CgfV_q5L.webp 500w"
+              sizes="(max-width: 600px) 85vw, 420px"
               class="logo-img"
               alt="DJ Atlas Official Logo - Professional DJ from Turkey"
               width="500"
@@ -479,15 +476,22 @@
           <div id="photo-gallery" class="photo-gallery">
             <div
               class="photo-item lazy-load"
-              data-src="./assets/images/photos/slider-photo1.webp"
-              data-pswp-src="./assets/images/photos/slider-photo1.webp"
-              data-pswp-width="1200"
-              data-pswp-height="800"
+              data-src="./assets/images/photos/slider-photo1-640.webp"
+              data-srcset="./assets/images/photos/slider-photo1-640.webp 640w, ./assets/images/photos/slider-photo1-lg.webp 1201w"
+              data-sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              data-pswp-src="./assets/images/photos/slider-photo1-lg.webp"
+              data-pswp-width="1201"
+              data-pswp-height="1803"
             >
               <div class="photo-skeleton">
                 <div class="skeleton-shimmer"></div>
               </div>
-              <img class="lazy-image" alt="Atlas Photo 1" loading="lazy" />
+              <img
+                class="lazy-image"
+                alt="Atlas Photo 1"
+                loading="lazy"
+                sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              />
               <div class="photo-overlay">
                 <button
                   type="button"
@@ -503,7 +507,7 @@
                   aria-label="Download Atlas Photo 1"
                   onclick="
                     downloadImage(
-                      './assets/images/photos/slider-photo1.webp',
+                      './assets/images/photos/slider-photo1-lg.webp',
                       'atlas-photo-1.webp',
                     )
                   "
@@ -514,15 +518,22 @@
             </div>
             <div
               class="photo-item lazy-load"
-              data-src="./assets/images/photos/slider-photo2.webp"
-              data-pswp-src="./assets/images/photos/slider-photo2.webp"
-              data-pswp-width="1200"
-              data-pswp-height="800"
+              data-src="./assets/images/photos/slider-photo2-640.webp"
+              data-srcset="./assets/images/photos/slider-photo2-640.webp 640w, ./assets/images/photos/slider-photo2-lg.webp 1280w"
+              data-sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              data-pswp-src="./assets/images/photos/slider-photo2-lg.webp"
+              data-pswp-width="1280"
+              data-pswp-height="1920"
             >
               <div class="photo-skeleton">
                 <div class="skeleton-shimmer"></div>
               </div>
-              <img class="lazy-image" alt="Atlas Photo 2" loading="lazy" />
+              <img
+                class="lazy-image"
+                alt="Atlas Photo 2"
+                loading="lazy"
+                sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              />
               <div class="photo-overlay">
                 <button
                   type="button"
@@ -538,7 +549,7 @@
                   aria-label="Download Atlas Photo 2"
                   onclick="
                     downloadImage(
-                      './assets/images/photos/slider-photo2.webp',
+                      './assets/images/photos/slider-photo2-lg.webp',
                       'atlas-photo-2.webp',
                     )
                   "
@@ -549,15 +560,22 @@
             </div>
             <div
               class="photo-item lazy-load"
-              data-src="./assets/images/photos/slider-photo3.webp"
-              data-pswp-src="./assets/images/photos/slider-photo3.webp"
-              data-pswp-width="1200"
-              data-pswp-height="800"
+              data-src="./assets/images/photos/slider-photo3-640.webp"
+              data-srcset="./assets/images/photos/slider-photo3-640.webp 640w, ./assets/images/photos/slider-photo3-lg.webp 1400w"
+              data-sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              data-pswp-src="./assets/images/photos/slider-photo3-lg.webp"
+              data-pswp-width="1400"
+              data-pswp-height="1750"
             >
               <div class="photo-skeleton">
                 <div class="skeleton-shimmer"></div>
               </div>
-              <img class="lazy-image" alt="Atlas Photo 3" loading="lazy" />
+              <img
+                class="lazy-image"
+                alt="Atlas Photo 3"
+                loading="lazy"
+                sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              />
               <div class="photo-overlay">
                 <button
                   type="button"
@@ -573,7 +591,7 @@
                   aria-label="Download Atlas Photo 3"
                   onclick="
                     downloadImage(
-                      './assets/images/photos/slider-photo3.webp',
+                      './assets/images/photos/slider-photo3-lg.webp',
                       'atlas-photo-3.webp',
                     )
                   "
@@ -584,15 +602,22 @@
             </div>
             <div
               class="photo-item lazy-load"
-              data-src="./assets/images/photos/slider-photo4.webp"
-              data-pswp-src="./assets/images/photos/slider-photo4.webp"
-              data-pswp-width="1200"
-              data-pswp-height="800"
+              data-src="./assets/images/photos/slider-photo4-640.webp"
+              data-srcset="./assets/images/photos/slider-photo4-640.webp 640w, ./assets/images/photos/slider-photo4-lg.webp 1280w"
+              data-sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              data-pswp-src="./assets/images/photos/slider-photo4-lg.webp"
+              data-pswp-width="1280"
+              data-pswp-height="1920"
             >
               <div class="photo-skeleton">
                 <div class="skeleton-shimmer"></div>
               </div>
-              <img class="lazy-image" alt="Atlas Photo 4" loading="lazy" />
+              <img
+                class="lazy-image"
+                alt="Atlas Photo 4"
+                loading="lazy"
+                sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              />
               <div class="photo-overlay">
                 <button
                   type="button"
@@ -608,7 +633,7 @@
                   aria-label="Download Atlas Photo 4"
                   onclick="
                     downloadImage(
-                      './assets/images/photos/slider-photo4.webp',
+                      './assets/images/photos/slider-photo4-lg.webp',
                       'atlas-photo-4.webp',
                     )
                   "
@@ -619,15 +644,22 @@
             </div>
             <div
               class="photo-item lazy-load"
-              data-src="./assets/images/photos/slider-photo5.webp"
-              data-pswp-src="./assets/images/photos/slider-photo5.webp"
-              data-pswp-width="1200"
-              data-pswp-height="800"
+              data-src="./assets/images/photos/slider-photo5-640.webp"
+              data-srcset="./assets/images/photos/slider-photo5-640.webp 640w, ./assets/images/photos/slider-photo5-lg.webp 1400w"
+              data-sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              data-pswp-src="./assets/images/photos/slider-photo5-lg.webp"
+              data-pswp-width="1400"
+              data-pswp-height="2101"
             >
               <div class="photo-skeleton">
                 <div class="skeleton-shimmer"></div>
               </div>
-              <img class="lazy-image" alt="Atlas Photo 5" loading="lazy" />
+              <img
+                class="lazy-image"
+                alt="Atlas Photo 5"
+                loading="lazy"
+                sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              />
               <div class="photo-overlay">
                 <button
                   type="button"
@@ -643,7 +675,7 @@
                   aria-label="Download Atlas Photo 5"
                   onclick="
                     downloadImage(
-                      './assets/images/photos/slider-photo5.webp',
+                      './assets/images/photos/slider-photo5-lg.webp',
                       'atlas-photo-5.webp',
                     )
                   "
@@ -654,15 +686,22 @@
             </div>
             <div
               class="photo-item lazy-load"
-              data-src="./assets/images/photos/slider-photo6.webp"
-              data-pswp-src="./assets/images/photos/slider-photo6.webp"
-              data-pswp-width="1200"
-              data-pswp-height="800"
+              data-src="./assets/images/photos/slider-photo6-640.webp"
+              data-srcset="./assets/images/photos/slider-photo6-640.webp 640w, ./assets/images/photos/slider-photo6-lg.webp 1400w"
+              data-sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              data-pswp-src="./assets/images/photos/slider-photo6-lg.webp"
+              data-pswp-width="1400"
+              data-pswp-height="2099"
             >
               <div class="photo-skeleton">
                 <div class="skeleton-shimmer"></div>
               </div>
-              <img class="lazy-image" alt="Atlas Photo 6" loading="lazy" />
+              <img
+                class="lazy-image"
+                alt="Atlas Photo 6"
+                loading="lazy"
+                sizes="(max-width: 700px) 92vw, (max-width: 1100px) 50vw, 400px"
+              />
               <div class="photo-overlay">
                 <button
                   type="button"
@@ -678,7 +717,7 @@
                   aria-label="Download Atlas Photo 6"
                   onclick="
                     downloadImage(
-                      './assets/images/photos/slider-photo5.webp',
+                      './assets/images/photos/slider-photo6-lg.webp',
                       'atlas-photo-6.webp',
                     )
                   "

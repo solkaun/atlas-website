@@ -258,23 +258,30 @@
 
   // Function to load a single image
   function loadImage(img, src, container) {
-    const tempImg = new Image();
+    const srcset = container.getAttribute("data-srcset");
+    const sizes = container.getAttribute("data-sizes");
 
-    tempImg.onload = function () {
-      img.src = src;
+    function done() {
       container.classList.add("loaded");
-
-      // Preload next images for smoother experience
       preloadNextImages(container);
+    }
+
+    img.onload = function () {
+      done();
     };
 
-    tempImg.onerror = function () {
-      // If image fails to load, still mark as loaded to hide skeleton
+    img.onerror = function () {
       container.classList.add("loaded");
       img.style.display = "none";
     };
 
-    tempImg.src = src;
+    if (srcset) {
+      img.srcset = srcset;
+    }
+    if (sizes) {
+      img.sizes = sizes;
+    }
+    img.src = src;
   }
 
   // Preload next few images for smoother scrolling
@@ -291,12 +298,7 @@
         const img = container.querySelector(".lazy-image");
         const src = container.getAttribute("data-src");
         if (src && img) {
-          const tempImg = new Image();
-          tempImg.onload = function () {
-            img.src = src;
-            container.classList.add("loaded");
-          };
-          tempImg.src = src;
+          loadImage(img, src, container);
         }
       }
     });
@@ -320,39 +322,39 @@
     // Photo Gallery data
     var galleryItems = [
       {
-        src: "./assets/images/photos/slider-photo1.webp",
-        w: 1200,
-        h: 800,
+        src: "./assets/images/photos/slider-photo1-lg.webp",
+        w: 1201,
+        h: 1803,
         title: "Atlas Photo 1",
       },
       {
-        src: "./assets/images/photos/slider-photo2.webp",
-        w: 1200,
-        h: 800,
+        src: "./assets/images/photos/slider-photo2-lg.webp",
+        w: 1280,
+        h: 1920,
         title: "Atlas Photo 2",
       },
       {
-        src: "./assets/images/photos/slider-photo3.webp",
-        w: 1200,
-        h: 800,
+        src: "./assets/images/photos/slider-photo3-lg.webp",
+        w: 1400,
+        h: 1750,
         title: "Atlas Photo 3",
       },
       {
-        src: "./assets/images/photos/slider-photo4.webp",
-        w: 1200,
-        h: 800,
+        src: "./assets/images/photos/slider-photo4-lg.webp",
+        w: 1280,
+        h: 1920,
         title: "Atlas Photo 4",
       },
       {
-        src: "./assets/images/photos/slider-photo5.webp",
-        w: 1200,
-        h: 800,
+        src: "./assets/images/photos/slider-photo5-lg.webp",
+        w: 1400,
+        h: 2101,
         title: "Atlas Photo 5",
       },
       {
-        src: "./assets/images/photos/slider-photo6.webp",
-        w: 1200,
-        h: 800,
+        src: "./assets/images/photos/slider-photo6-lg.webp",
+        w: 1400,
+        h: 2099,
         title: "Atlas Photo 6",
       },
     ];
@@ -414,9 +416,17 @@
     function updateGalleryItems() {
       const photoItems = document.querySelectorAll(".photo-item");
       photoItems.forEach((item, index) => {
-        const img = item.querySelector(".lazy-image");
-        if (img && img.src && img.src !== "") {
-          galleryItems[index].src = img.src;
+        const pswp = item.getAttribute("data-pswp-src");
+        const pw = parseInt(item.getAttribute("data-pswp-width"), 10);
+        const ph = parseInt(item.getAttribute("data-pswp-height"), 10);
+        if (pswp && galleryItems[index]) {
+          galleryItems[index].src = pswp;
+          if (!Number.isNaN(pw)) {
+            galleryItems[index].w = pw;
+          }
+          if (!Number.isNaN(ph)) {
+            galleryItems[index].h = ph;
+          }
         }
       });
     }

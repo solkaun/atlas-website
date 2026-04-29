@@ -349,6 +349,12 @@
         h: 800,
         title: "Atlas Photo 5",
       },
+      {
+        src: "./assets/images/photos/slider-photo6.webp",
+        w: 1200,
+        h: 800,
+        title: "Atlas Photo 6",
+      },
     ];
 
     // Global function to open PhotoSwipe
